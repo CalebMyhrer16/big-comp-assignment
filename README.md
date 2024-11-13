@@ -90,3 +90,15 @@ while True:
         cp.pixels[9] = (0, 0, 0)
     else:
 		     cp.pixels.fill((0,0,0)) # Off
+from adafruit_circuitplayground import cp
+import time
+while True:
+    temp_c = cp.temperature
+    temp_f = (temp_c * 9 / 5) + 32
+    if temp_c < 78:  # Example threshold for cold
+        cp.pixels[0] = (0, 0, 25)
+    elif temp_c > 30:  # Example threshold for hot
+        cp.pixels.fill((25, 0, 0))  # Red for hot
+    else:
+        cp.pixels.fill((0, 25, 0))  # Green for moderate
+    time.sleep(0.5)
