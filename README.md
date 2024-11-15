@@ -176,3 +176,12 @@ while True:
     cp.pixels[8] = (0,0,0)
     cp.pixels[8] = (0,0,0)
     
+from adafruit_circuitplayground import cp
+import time
+import random
+while True:
+    x, y, z = cp.acceleration  # Get acceleration along X, Y, Z axes
+    shake_threshold = 1.0  # Example threshold value
+    if abs(x) > shake_threshold or abs(y) > shake_threshold or abs(z) > shake_threshold:
+        cp.pixels.fill = (0,155,0)
+
