@@ -1,3 +1,4 @@
+#blinky
 # first need to import board specific tools
 #every project for this board will need this statment
 from adafruit_circuitplayground import cp
@@ -9,7 +10,7 @@ while True:
     time.sleep(.367)
     cp.pixels.fill((0,0,0))
     time.sleep(.367)
-    
+#flip flop   
 # first need to import board specific tools
 #every project for this board will need this statment
 from adafruit_circuitplayground import cp
@@ -30,6 +31,7 @@ while True:
         cp.pixels[1] = (0,0,0)
         cp.pixels[2] = (0,0,0)
         cp.pixels[3] = (0,0,0)
+#tippy
 # first need to import board specific tools
 #every project for this board will need this statment
 from adafruit_circuitplayground import cp
@@ -54,6 +56,7 @@ while True:
         cp.pixels[3] = (0,0,0)
     else:
         cp.pixels.fill((0,0,0))
+#woosh
 from adafruit_circuitplayground import cp
 import time
 while True:
@@ -90,6 +93,7 @@ while True:
         cp.pixels[9] = (0, 0, 0)
     else:
 		     cp.pixels.fill((0,0,0)) # Off
+#tempature
 # first need to import board specific tools
 #every project for this board will need this statment
 from adafruit_circuitplayground import cp
@@ -197,3 +201,31 @@ while True: # Threshold to detect significant motion
         cp.pixels[8] = (range,rang,ran)
         cp.pixels[9] = (range,rang,ran)
         cp.pixels.brightness = .3
+#police siren
+from adafruit_circuitplayground import cp
+import time
+import random
+while True:
+       cp.pixels[0] = (15,0,0)
+       cp.pixels[1] = (15,0,0)
+       cp.pixels[2] = (15,0,0)
+       cp.pixels[3] = (15,0,0)
+       cp.pixels[4] = (15,0,0)
+       cp.pixels[5] = (0,0,0)
+       cp.pixels[6] = (0,0,0)
+       cp.pixels[7] = (0,0,0)
+       cp.pixels[8] = (0,0,0)
+       cp.pixels[9] = (0,0,0)
+       cp.play_tone(580.00,.3)
+       time.sleep(.3)
+       cp.pixels[0] = (0,0,0)
+       cp.pixels[1] = (0,0,0)
+       cp.pixels[2] = (0,0,0)
+       cp.pixels[3] = (0,0,0)
+       cp.pixels[4] = (0,0,0)
+       cp.pixels[5] = (0,0,15)
+       cp.pixels[6] = (0,0,15)
+       cp.pixels[7] = (0,0,15)
+       cp.pixels[8] = (0,0,15)
+       cp.pixels[9] = (0,0,15)
+       cp.play_tone(693.88,.3)
